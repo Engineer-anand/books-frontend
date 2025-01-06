@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    /* --primary-colour:#8880ff; */
+    --secondary-colour: ;
+}
+
+body {
+    background-color: var(--primary-colour);
+    background: var(--primary-colour);
+    /* display:  block; */
+}
+
+html {
+    font-size: 80.5%;
+}
+
+.header {
+    width: auto;
+    height: 100vh;
+    color: white;
+    box-shadow: 0 5px 10px rgb(177, 177, 177);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.header::before {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./images/books-bg.jpg);
+    z-index: -1;
+    clip-path: circle(60% at left 159px);
+}
+
+.row2 {
+    position: absolute;
+    width: 493px;
+    top: 40px;
+    right: 78px;
+    text-align: center;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.row2 h2 {
+    font-size: 3.5rem;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    margin-right: 15px;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.row2 img {
+    margin-top: 35px;
+    width: 100%;
+    max-width: 40rem;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.row1 h1 {
+    font-size: 3.5rem;
+    text-align: center;
+    font-family: 'Bodoni Moda', serif;
+    margin-left: 2rem;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.search input {
+    width: 87%;
+    height: 34px;
+    background: transparent;
+    border: 2px solid #f2f2f2;
+    outline: none;
+    border-radius: 40px;
+    color: #f2f2f2;
+    padding: 2px 2px 0 10px;
+    font-size: 16px;
+}
+
+.search button {
+    width: 30px;
+    height: 29px;
+    margin-left: 6px;
+    background: transparent;
+    color: #fff;
+    border: 2px solid #f2f2f2;
+}
+
+.container {
+    width: 87%;
+    margin: 0 auto;
+    margin-top: 25px;
+    display: grid;
+    grid-gap: 70px;
+    grid-template-rows: 1fr auto;
+    height: 100%;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.09);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12.8px);
+    -webkit-backdrop-filter: blur(12.8px);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    padding: 0.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.card:hover {
+    transform: scale(0.9);
+    background-color: #525252;
+}
+
+.card img {
+    height: 200px;
+    width: 95%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 0fr));
+    gap: 25px;
+    color: #f2f2f2;
+    justify-content: center;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.pagination-button {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+    margin: 0;
+}
+
+.pagination-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.pagination-button:hover:not(:disabled) {
+    background-color: #b8b8b8;
+}
+
+
+.dropdown-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.dropdown-btn {
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    background: transparent;
+    color: #f0f0f0;
+    width: 50px;
+}
+
+.dropdown-btn:hover {
+    background: white;
+    color: #1d1c1c;
+    transition: 0.4s ease-in-out;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: rgba(255, 255, 255, 0.09);
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12.8px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    padding: 10px;
+    width: 150px;
+    border-radius: 4px;
+}
+
+.dropdown-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 16px;
+
+}
+
+.dropdown-menu li {
+    padding: 8px;
+    cursor: pointer;
+    margin: 0 0 0 2px;
+    /* display: flex; */
+
+
+}
+
+.dropdown-menu li:hover {
+    transform: scale(0.9);
+    background-color: #525252;
+
+}
+
+.dropdown-menu li .fa {
+    margin: 0 10px 0 0;
+    font-size: 18px;
+
+}
+
+.dropdown-menu li:hover {
+    background-color: #515151;
+}
+
+.contact-container {
+    color: white;
+    font-size: 22px;
+    margin: 20px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .row2 {
+        width: 400px;
+        right: 50px;
+    }
+
+    .row2 h2 {
+        font-size: 3rem;
+    }
+
+    .row2 img {
+        width: 90%;
+    }
+
+    .row1 h1 {
+        font-size: 3rem;
+        margin-left: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .row2 {
+        position: relative;
+        width: 100%;
+        right: 0;
+        text-align: center;
+    }
+
+    .row2 img {
+        margin-top: 20px;
+        width: 80%;
+    }
+
+    .row1 h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .row2 h2 {
+        font-size: 2.5rem;
+    }
+
+    .search input {
+        width: 100%;
+    }
+   
+    .row2 img {
+        /* width: 10px; */
+        height: 100%;
+     margin-left: 10vw;
+    }
+    .row1{
+        margin-top: 7vh;
+    }
+
+    .row1 h1 {
+        font-size: 2rem;
+        margin: 21px 33px 0 0;
+    }
+
+    .container {
+        grid-gap: 20px;
+        width: auto;
+    }
+
+    .card img {
+        height: 150px;
+        width: 75%;
+    }
+
+
+    .body {
+        background: #000;
+    }
+
+    .header::before {
+        clip-path: circle(70% at left 100px);
+
+    }
+
+    .header {
+        height: 100vh;
+    }
+}

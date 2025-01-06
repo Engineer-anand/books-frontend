@@ -1,0 +1,109 @@
+
+.wraps {
+    position: relative;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.09);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12.8px);
+    -webkit-backdrop-filter: blur(12.8px);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 50px;
+    box-shadow: 0 0 60px rgba(0, 0, 0, .3);
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+/* Logo Styling */
+.wrap img {
+    max-width: 120px;
+    margin-bottom: 20px;
+}
+
+/* Form Title */
+.form-wrap h2 {
+    font-size: 24px;
+    color: #333333;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Input Box Styling */
+.input-bx {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-bx input {
+    width: 100%;
+    padding: 12px 15px;
+    padding-left: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    box-sizing: border-box;
+}
+
+.input-bx input:focus {
+    border-color: #007bff;
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+}
+
+.icn {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #888888;
+    font-size: 18px;
+}
+
+
+.back-link {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #fffefe;
+    padding-left: 55px;
+}
+
+.back-link a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-wrap {
+        padding: 30px 20px;
+    }
+
+    .form-wrap h2 {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-wrap {
+        padding: 20px 15px;
+    }
+
+    .form-wrap h2 {
+        font-size: 18px;
+    }
+
+    button {
+        font-size: 13px;
+    }
+}
